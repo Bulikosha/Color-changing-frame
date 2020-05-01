@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Color changing frame</title>
+	<style type="text/css">
+		.form_for_command {
+			margin-top: 25px;
+			text-align: center;
+		}
+		
+		.color_frame {
+			height: 400px;
+			width: 400px;
+			display: inline-block;
+			background-color: {{ color }};
+		}
+
+	</style>
+</head>
+<body style="text-align: center">
+	<div class="color_frame">
+		<!-- Frame changing color -->
+	</div>
+	<div class="form_for_command">
+		<form action="http://127.0.0.1:5000/" method="POST">
+			<input type="text" name="color" placeholder="Enter color">
+			<button type="button">Submit</button> 
+			<!-- onclick="window.location.href='{{ url_for('index') }}' -->
+		</form>
+	</div>
+
+</body>
+</html>
